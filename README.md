@@ -30,7 +30,7 @@ NEXT_PUBLIC_UNSPLASH_ACCESS_KEY=
 GEMINI_API_KEY=
 ```
 
-# steps to run
+# Steps to run
 
 - npm run dev
 - npx convex dev
