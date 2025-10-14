@@ -13,7 +13,7 @@ export async function generateBlogContent(title, category = "", tags = []) {
     // Create a detailed prompt for post description content generation
     const response = await genAI.models.generateContent({
       model: "gemini-2.5-flash",
-      contents: `Write a comprehensive post description with the title: "${title}"
+      contents: `Write a post description with the title: "${title}"
 
 ${category ? `Category: ${category}` : ""}
 ${tags.length > 0 ? `Tags: ${tags.join(", ")}` : ""}
@@ -92,7 +92,7 @@ Requirements:
 - Enhance readability and flow
 - Include practical examples if appropriate
 - For "expand": add more depth and insights
-- For "simplify": make it concise and clear
+- For "simplify": make it concise and clear under 150 words(dont mentions here's updated content)
 - For "enhance": make it more engaging and compelling
 `,
     });
