@@ -12,7 +12,7 @@ import PostEditorHeader from "./post-editor-header";
 import PostEditorContent from "./post-editor-content";
 import PostEditorSettings from "./post-editor-settings";
 import ImageUploadModal from "./image-upload-modal";
-
+import SharePost from "./share-post";
 const postSchema = z.object({
   title: z.string().min(1, "Title is required").max(200, "Title too long"),
   content: z.string().min(1, "Content is required"),
@@ -164,7 +164,6 @@ export default function PostEditor({
         onSettingsOpen={() => setIsSettingsOpen(true)}
         onBack={() => router.push("/dashboard")}
       />
-
       <PostEditorContent
         form={form}
         setQuillRef={setQuillRef}
@@ -174,13 +173,20 @@ export default function PostEditor({
         }}
       />
 
+      {/* post share component */}
+      {/* <SharePost
+        postUrl={`https://yourdomain.com/posts/${initialData?._id || "new"}`}
+        title={watchedValues.title}
+        description={watchedValues.content.slice(0, 200)} // share short description
+        image={watchedValues.featuredImage}
+      /> */}
+
       <PostEditorSettings
         isOpen={isSettingsOpen}
         onClose={() => setIsSettingsOpen(false)}
         form={form}
         mode={mode}
       />
-
       <ImageUploadModal
         isOpen={isImageModalOpen}
         onClose={() => setIsImageModalOpen(false)}

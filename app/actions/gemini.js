@@ -92,7 +92,7 @@ Requirements:
 - Enhance readability and flow
 - Include practical examples if appropriate
 - For "expand": add more depth and insights
-- For "simplify": make it concise and clear under 150 words(dont mentions here's updated content)
+- For "simplify": make it concise and clear and try keeping content under 150 words(dont mentions here's updated content)
 - For "enhance": make it more engaging and compelling
 `,
     });

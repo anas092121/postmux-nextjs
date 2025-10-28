@@ -246,6 +246,48 @@ export default function PostEditorContent({
             {errors.content && (
               <p className="text-red-400 mt-2">{errors.content.message}</p>
             )}
+            <Button
+              onClick={() => {
+                try {
+                  const plainText = watchedValues.content
+                    ?.replace(/<\/p>/g, "\n\n") // add line breaks after paragraphs
+                    .replace(/<br\s*\/?>/g, "\n") // handle <br> tags
+                    .replace(/<[^>]+>/g, "") // remove all remaining HTML tags
+                    .replace(/\n{3,}/g, "\n\n") // collapse too many blank lines
+                    .trim();
+
+                  if (!plainText) {
+                    toast.error("No content to copy!");
+                    return;
+                  }
+
+                  if (
+                    typeof window !== "undefined" &&
+                    navigator?.clipboard?.writeText
+                  ) {
+                    navigator.clipboard.writeText(plainText);
+                    toast.success("Content copied to clipboard!");
+                  } else {
+                    // fallback for environments where clipboard API is not supported
+                    const textarea = document.createElement("textarea");
+                    textarea.value = plainText;
+                    document.body.appendChild(textarea);
+                    textarea.select();
+                    document.execCommand("copy");
+                    document.body.removeChild(textarea);
+                    toast.success("Copied using fallback method!");
+                  }
+                } catch (error) {
+                  console.error(error);
+                  toast.error("Failed to copy content. Try again!");
+                }
+              }}
+              variant="outline"
+              size="sm"
+              className="mt-4 border-purple-500 text-purple-400 hover:bg-purple-500 hover:text-white"
+            >
+              Copy Content
+            </Button>
           </div>
         </div>
       </main>
