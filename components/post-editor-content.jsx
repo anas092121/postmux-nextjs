@@ -200,7 +200,7 @@ export default function PostEditorContent({
                 {[
                   { type: "enhance", icon: Sparkles, color: "green" },
                   { type: "expand", icon: Plus, color: "blue" },
-                  { type: "simplify", icon: Minus, color: "orange" },
+                  { type: "summarize", icon: Minus, color: "grey" },
                 ].map(({ type, icon: Icon, color }) => (
                   <Button
                     key={type}

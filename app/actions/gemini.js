@@ -91,8 +91,8 @@ Requirements:
 - Maintain the tone and style
 - Enhance readability and flow
 - Include practical examples if appropriate
-- For "expand": add more depth and insights
-- For "simplify": make it concise and clear and try keeping content under 150 words(dont mentions here's updated content)
+- For "expand": add more depth and insights and make it more comprehensive, engaging ,compelling
+- For "summarize": make it concise and clear and try keeping content under 150 words(dont mentions here's updated content)
 - For "enhance": make it more engaging and compelling
 `,
     });
