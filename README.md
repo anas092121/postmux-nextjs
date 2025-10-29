@@ -34,3 +34,46 @@ GEMINI_API_KEY=
 
 - npm run dev
 - npx convex dev
+
+# Dependencies
+
+## 🧠 AI & Backend
+
+- **@google/genai**, **@google/generative-ai** – Access Google Gemini APIs for text and image generation
+- **convex** – Real-time backend & database service for Next.js apps
+- **imagekit** – Handles image uploads, optimization, and CDN delivery
+
+## 🔐 Authentication & User Management
+
+- **@clerk/nextjs** – Authentication, user sessions, and role management in Next.js
+- **@clerk/themes** – Prebuilt styling/themes for Clerk components
+
+## 🎨 UI & Styling
+
+- **@radix-ui/react-\*** – Accessible, unstyled UI primitives (Dialog, Dropdown, Tabs, etc.)
+- **lucide-react** – React icon library
+- **class-variance-authority** – Manage Tailwind class variants efficiently
+- **clsx** – Conditional className utility
+- **tailwind-merge** – Merges Tailwind classes to avoid conflicts
+- **next-themes** – Manages dark/light mode themes
+- **sonner** – Animated toast notifications
+- **react-spinners** – Loading spinners and animations
+
+## 🧾 Forms & Validation
+
+- **react-hook-form** – Lightweight form state management
+- **@hookform/resolvers** – Connects `react-hook-form` with schema validators like Zod
+- **zod** – Schema-based validation and type safety
+
+## 📊 Data Visualization & Interaction
+
+- **react-chartjs-2** – React wrapper around Chart.js for charts and graphs
+- **react-intersection-observer** – Detects when elements appear/disappear in viewport
+- **react-dropzone** – Enables drag-and-drop file uploads
+- **react-quill-new** – Rich text editor
+- **react-share** – Social media share buttons
+
+## ⚙️ Core Framework
+
+- **next**, **react**, **react-dom** – Core Next.js and React libraries for building and rendering the app
+- **date-fns** – Lightweight library for date/time formatting and manipulation
