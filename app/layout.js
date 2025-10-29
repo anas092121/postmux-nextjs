@@ -6,6 +6,7 @@ import Header from "@/components/header";
 import { ClerkProvider } from "@clerk/nextjs";
 import { shadesOfPurple } from "@clerk/themes";
 import { ConvexClientProvider } from "@/components/convex-client-provider";
+import { Analytics } from "@vercel/analytics/next";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -41,6 +42,7 @@ export default function RootLayout({ children }) {
             </ConvexClientProvider>
           </ClerkProvider>
         </ThemeProvider>
+        <Analytics />
       </body>
     </html>
   );
